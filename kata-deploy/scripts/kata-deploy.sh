@@ -50,8 +50,7 @@ function get_container_runtime() {
 
 function install_artifacts() {
 	echo "copying kata artifacts onto host"
-	cp -a /opt/kata-artifacts/opt/kata/* /opt/kata/
-	chmod +x /opt/kata/bin/*
+	install /opt/kata-artifacts/opt/kata/* /opt/kata/
 }
 
 function configure_cri_runtime() {
