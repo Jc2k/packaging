@@ -50,7 +50,7 @@ function get_container_runtime() {
 
 function install_artifacts() {
 	echo "copying kata artifacts onto host"
-	install /opt/kata-artifacts/opt/kata/* /opt/kata/
+	rsync -a --delete /opt/kata-artifacts/opt/kata/ /opt/kata/
 }
 
 function configure_cri_runtime() {
